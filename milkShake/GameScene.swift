@@ -9,6 +9,7 @@
 import SpriteKit
 import GameplayKit
 import CoreGraphics
+import CoreMotion
 
 
 class GameScene: SKScene {
@@ -39,6 +40,12 @@ class GameScene: SKScene {
         belt2.position.y -= 500
         belt2.position.x += 1000
         addChild(belt2)
+        let belt3 = SKSpriteNode(imageNamed: "belt.png")
+        belt3.zPosition = 2
+        belt3.position.y -= 500
+        belt3.position.x -= 1000
+        addChild(belt3)
+        
         
         let emptyCup = SKSpriteNode(imageNamed: "emptyCup.png")
         emptyCup.zPosition = 3
@@ -67,14 +74,54 @@ class GameScene: SKScene {
 //        let fadeAway = SKAction.fadeOut(withDuration: 3.0)
 //        let fadeIn = SKAction.fadeIn(withDuration: 3.0)
         let moveleft = SKAction.moveBy(x: -800, y: 0, duration: 1.0)
-        let waitAction = SKAction.wait(forDuration: 2.0)
+//        let waitAction = SKAction.wait(forDuration: 2.0)
         let moveback = SKAction.moveTo(x: 700, duration: 0.0)
-        let sequence = SKAction.sequence([moveleft, waitAction, moveback])
+        let sequence = SKAction.sequence([moveleft,moveback,moveleft])
         let sequence2 = SKAction.sequence([moveleft,moveleft, moveback])
+        let sequence3 = SKAction.sequence([moveback,moveleft,moveleft,moveleft])
         let pulse = SKAction.repeatForever(sequence)
         let pulse2 = SKAction.repeatForever(sequence2)
+        let pulse3 = SKAction.repeatForever(sequence3)
         belt.run(pulse)
         belt2.run(pulse2)
+        belt3.run(pulse3)
+        
+        
+        var motionManager = CMMotionManager()
+        let opQueue = OperationQueue()
+        
+        func degrees(_ radians: Double) -> Double {
+            return 180/Double.pi * radians
+        }
+        
+        func startReadingMotionData() {
+            // set read speed
+            motionManager.deviceMotionUpdateInterval = 1
+            // start reading
+            motionManager.startDeviceMotionUpdates(to: opQueue) {
+                (data: CMDeviceMotion?, error: Error?) in
+                
+                if let mydata = data {
+                    print("mydata", mydata.gravity)
+                    print("pitch raw", mydata.attitude.pitch)
+                    print("pitch",  degrees(mydata.attitude.pitch))
+                }
+            }
+        }
+    
+
+            if motionManager.isDeviceMotionAvailable {
+                print("We can detect device motion")
+                startReadingMotionData()
+            }
+            else {
+                print("We cannot detect device motion")
+            }
+
+        
+ 
+        
+     
         
 //        // Create shape node to use during mouse interaction
 //        let w = (self.size.width + self.size.height) * 0.05
