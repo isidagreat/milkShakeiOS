@@ -17,6 +17,11 @@
 		39DC6ACA20EED2ED00D83D75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39DC6AC820EED2ED00D83D75 /* LaunchScreen.storyboard */; };
 		39DC6AD520EED2ED00D83D75 /* milkShakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DC6AD420EED2ED00D83D75 /* milkShakeTests.swift */; };
 		39DC6AE020EED2ED00D83D75 /* milkShakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DC6ADF20EED2ED00D83D75 /* milkShakeUITests.swift */; };
+		39DC6AF020EEDEB400D83D75 /* cow.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC6AEF20EEDEB400D83D75 /* cow.png */; };
+		39DC6AF420EEE15F00D83D75 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39DC6AF320EEE15F00D83D75 /* background.jpg */; };
+		39DC6AF620EEE48800D83D75 /* belt.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC6AF520EEE48800D83D75 /* belt.png */; };
+		39DC6AF820EEE90900D83D75 /* emptyCup.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC6AF720EEE90800D83D75 /* emptyCup.png */; };
+		39DC6AFA20EEE90F00D83D75 /* FilledCup.png in Resources */ = {isa = PBXBuildFile; fileRef = 39DC6AF920EEE90E00D83D75 /* FilledCup.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		39DC6ADB20EED2ED00D83D75 /* milkShakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = milkShakeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39DC6ADF20EED2ED00D83D75 /* milkShakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = milkShakeUITests.swift; sourceTree = "<group>"; };
 		39DC6AE120EED2ED00D83D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39DC6AEF20EEDEB400D83D75 /* cow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cow.png; path = ../../../../cow.png; sourceTree = "<group>"; };
+		39DC6AF320EEE15F00D83D75 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = SOURCE_ROOT; };
+		39DC6AF520EEE48800D83D75 /* belt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = belt.png; path = ../../../../belt.png; sourceTree = "<group>"; };
+		39DC6AF720EEE90800D83D75 /* emptyCup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = emptyCup.png; path = ../../../../emptyCup.png; sourceTree = "<group>"; };
+		39DC6AF920EEE90E00D83D75 /* FilledCup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FilledCup.png; path = ../../../../FilledCup.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,11 @@
 				39DC6AC620EED2ED00D83D75 /* Assets.xcassets */,
 				39DC6AC820EED2ED00D83D75 /* LaunchScreen.storyboard */,
 				39DC6ACB20EED2ED00D83D75 /* Info.plist */,
+				39DC6AEF20EEDEB400D83D75 /* cow.png */,
+				39DC6AF320EEE15F00D83D75 /* background.jpg */,
+				39DC6AF520EEE48800D83D75 /* belt.png */,
+				39DC6AF720EEE90800D83D75 /* emptyCup.png */,
+				39DC6AF920EEE90E00D83D75 /* FilledCup.png */,
 			);
 			path = milkShake;
 			sourceTree = "<group>";
@@ -240,6 +255,11 @@
 			files = (
 				39DC6AC520EED2EC00D83D75 /* Main.storyboard in Resources */,
 				39DC6ABC20EED2EC00D83D75 /* GameScene.sks in Resources */,
+				39DC6AF620EEE48800D83D75 /* belt.png in Resources */,
+				39DC6AF420EEE15F00D83D75 /* background.jpg in Resources */,
+				39DC6AF820EEE90900D83D75 /* emptyCup.png in Resources */,
+				39DC6AF020EEDEB400D83D75 /* cow.png in Resources */,
+				39DC6AFA20EEE90F00D83D75 /* FilledCup.png in Resources */,
 				39DC6AC720EED2ED00D83D75 /* Assets.xcassets in Resources */,
 				39DC6ACA20EED2ED00D83D75 /* LaunchScreen.storyboard in Resources */,
 				39DC6ABE20EED2EC00D83D75 /* Actions.sks in Resources */,
